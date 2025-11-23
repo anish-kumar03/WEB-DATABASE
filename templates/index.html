@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper - Interactive Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .scraper-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .input-section {
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .scrape-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .scrape-type {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .scrape-type:hover {
+            background: #e8e8e8;
+            transform: translateY(-2px);
+        }
+
+        .scrape-type.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .scrape-type h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .scrape-type p {
+            font-size: 0.85em;
+            opacity: 0.8;
+        }
+
+        .btn-scrape {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-scrape:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .btn-scrape:active {
+            transform: translateY(0);
+        }
+
+        .btn-scrape:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .results-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .results-content {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .result-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border-left: 4px solid #667eea;
+        }
+
+        .result-item h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .result-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .error {
+            background: #fee;
+            border-left-color: #f44;
+        }
+
+        .error h4 {
+            color: #f44;
+        }
+
+        .success {
+            background: #efe;
+            border-left-color: #4f4;
+        }
+
+        .btn-download {
+            background: white;
+            color: #667eea;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: #f0f0f0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-box .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .link-item, .table-item {
+            background: white;
+            padding: 10px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .link-item a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .examples {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .examples h4 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .example-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .example-link {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .example-link:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🕷️ Web Scraper</h1>
+            <p>Extract data from any website instantly</p>
+        </div>
+
+        <div class="scraper-card">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="url">Website URL</label>
+                    <input type="text" id="url" placeholder="Enter URL (e.g., https://example.com)" />
+                </div>
+
+                <label>Scraping Type</label>
+                <div class="scrape-types">
+                    <div class="scrape-type active" data-type="basic">
+                        <h3>📊 Basic</h3>
+                        <p>Quick overview with counts</p>
+                    </div>
+                    <div class="scrape-type" data-type="links">
+                        <h3>🔗 Links</h3>
+                        <p>Extract all hyperlinks</p>
+                    </div>
+                    <div class="scrape-type" data-type="tables">
+                        <h3>📋 Tables</h3>
+                        <p>Extract table data</p>
+                    </div>
+                    <div class="scrape-type" data-type="detailed">
+                        <h3>📄 Detailed</h3>
+                        <p>Full content extraction</p>
+                    </div>
+                </div>
+
+                <div class="examples">
+                    <h4>Try these examples:</h4>
+                    <div class="example-links">
+                        <span class="example-link" data-url="https://quotes.toscrape.com">Quotes</span>
+                        <span class="example-link" data-url="https://books.toscrape.com">Books</span>
+                        <span class="example-link" data-url="https://en.wikipedia.org/wiki/Web_scraping">Wikipedia</span>
+                        <span class="example-link" data-url="https://news.ycombinator.com">Hacker News</span>
+                    </div>
+                </div>
+
+                <button class="btn-scrape" id="scrapeBtn">Start Scraping</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Scraping website...</p>
+            </div>
+
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h3>📦 Scraped Results</h3>
+                    <button class="btn-download" id="downloadBtn" style="display:none;">Download JSON</button>
+                </div>
+                <div class="results-content" id="resultsContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedType = 'basic';
+        let currentFilename = '';
+
+        // Handle scrape type selection
+        document.querySelectorAll('.scrape-type').forEach(type => {
+            type.addEventListener('click', function() {
+                document.querySelectorAll('.scrape-type').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                selectedType = this.dataset.type;
+            });
+        });
+
+        // Handle example links
+        document.querySelectorAll('.example-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('url').value = this.dataset.url;
+            });
+        });
+
+        // Handle scraping
+        document.getElementById('scrapeBtn').addEventListener('click', async function() {
+            const url = document.getElementById('url').value.trim();
+            
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+
+            // Show loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results').style.display = 'none';
+            this.disabled = true;
+
+            try {
+                const response = await fetch('/scrape', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        url: url,
+                        scrape_type: selectedType
+                    })
+                });
+
+                const data = await response.json();
+                displayResults(data);
+
+            } catch (error) {
+                displayError('Network error: ' + error.message);
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                this.disabled = false;
+            }
+        });
+
+        function displayResults(data) {
+            const resultsContent = document.getElementById('resultsContent');
+            const results = document.getElementById('results');
+            const downloadBtn = document.getElementById('downloadBtn');
+
+            results.style.display = 'block';
+            resultsContent.innerHTML = '';
+
+            if (data.status === 'error') {
+                resultsContent.innerHTML = `
+                    <div class="result-item error">
+                        <h4>❌ Error</h4>
+                        <p>${data.message}</p>
+                    </div>
+                `;
+                downloadBtn.style.display = 'none';
+                return;
+            }
+
+            // Show success message
+            resultsContent.innerHTML = `
+                <div class="result-item success">
+                    <h4>✅ Successfully Scraped</h4>
+                    <p><strong>URL:</strong> ${data.url}</p>
+                    <p><strong>Type:</strong> ${data.scrape_type}</p>
+                    <p><strong>Time:</strong> ${data.timestamp}</p>
+                </div>
+            `;
+
+            // Display data based on type
+            if (data.scrape_type === 'basic') {
+                displayBasicResults(data.data, resultsContent);
+            } else if (data.scrape_type === 'links') {
+                displayLinksResults(data.data, resultsContent);
+            } else if (data.scrape_type === 'tables') {
+                displayTablesResults(data.data, resultsContent);
+            } else if (data.scrape_type === 'detailed') {
+                displayDetailedResults(data.data, resultsContent);
+            }
+
+            // Setup download button
+            if (data.saved_file) {
+                currentFilename = data.saved_file.split('/').pop();
+                downloadBtn.style.display = 'block';
+            }
+        }
+
+        function displayBasicResults(data, container) {
+            container.innerHTML += `
+                <div class="result-item">
+                    <h4>📄 ${data.title}</h4>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="number">${data.paragraphs_count}</div>
+                            <div class="label">Paragraphs</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">${data.links_count}</div>
+                            <div class="label">Links</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">${data.images_count}</div>
+                            <div class="label">Images</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">${data.headings_count}</div>
+                            <div class="label">Headings</div>
+                        </div>
+                    </div>
+                    <h4>Preview:</h4>
+                    <p>${data.preview_text}</p>
+                </div>
+            `;
+        }
+
+        function displayLinksResults(data, container) {
+            let linksHtml = `
+                <div class="result-item">
+                    <h4>🔗 ${data.title}</h4>
+                    <p><strong>Total Links:</strong> ${data.total_links}</p>
+                    <h4 style="margin-top: 15px;">Links Found:</h4>
+            `;
+
+            data.links.forEach((link, index) => {
+                linksHtml += `
+                    <div class="link-item">
+                        <strong>${index + 1}.</strong> ${link.text || 'No text'} 
+                        <br><a href="${link.url}" target="_blank">${link.url}</a>
+                    </div>
+                `;
+            });
+
+            linksHtml += '</div>';
+            container.innerHTML += linksHtml;
+        }
+
+        function displayTablesResults(data, container) {
+            let tablesHtml = `
+                <div class="result-item">
+                    <h4>📋 ${data.title}</h4>
+                    <p><strong>Total Tables:</strong> ${data.total_tables}</p>
+            `;
+
+            if (data.tables.length === 0) {
+                tablesHtml += '<p>No tables found on this page.</p>';
+            } else {
+                data.tables.forEach(table => {
+                    if (table.error) {
+                        tablesHtml += `<p>Table ${table.table_number}: ${table.error}</p>`;
+                    } else {
+                        tablesHtml += `
+                            <div class="table-item">
+                                <h4>Table ${table.table_number}</h4>
+                                <p><strong>Size:</strong> ${table.rows} rows × ${table.columns} columns</p>
+                                <pre style="overflow-x: auto; background: #f5f5f5; padding: 10px; border-radius: 4px;">${JSON.stringify(table.data, null, 2)}</pre>
+                            </div>
+                        `;
+                    }
+                });
+            }
+
+            tablesHtml += '</div>';
+            container.innerHTML += tablesHtml;
+        }
+
+        function displayDetailedResults(data, container) {
+            let detailedHtml = `
+                <div class="result-item">
+                    <h4>📄 ${data.title}</h4>
+                    ${data.meta_description ? `<p><strong>Description:</strong> ${data.meta_description}</p>` : ''}
+                    
+                    <h4 style="margin-top: 15px;">Headings Structure:</h4>
+            `;
+
+            for (const [level, headings] of Object.entries(data.headings)) {
+                if (headings.length > 0) {
+                    detailedHtml += `<p><strong>${level.toUpperCase()}:</strong> ${headings.length} found</p>`;
+                    headings.slice(0, 5).forEach(h => {
+                        detailedHtml += `<p style="margin-left: 20px;">• ${h}</p>`;
+                    });
+                }
+            }
+
+            detailedHtml += `
+                <h4 style="margin-top: 15px;">Content (${data.total_paragraphs} paragraphs total):</h4>
+            `;
+
+            data.paragraphs.forEach((p, index) => {
+                detailedHtml += `<p><strong>${index + 1}.</strong> ${p.substring(0, 200)}${p.length > 200 ? '...' : ''}</p>`;
+            });
+
+            detailedHtml += '</div>';
+            container.innerHTML += detailedHtml;
+        }
+
+        function displayError(message) {
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('resultsContent').innerHTML = `
+                <div class="result-item error">
+                    <h4>❌ Error</h4>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        // Handle download
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            if (currentFilename) {
+                window.location.href = `/download/${currentFilename}`;
+            }
+        });
+
+        // Allow Enter key to submit
+        document.getElementById('url').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('scrapeBtn').click();
+            }
+        });
+    </script>
+</body>
+</html>

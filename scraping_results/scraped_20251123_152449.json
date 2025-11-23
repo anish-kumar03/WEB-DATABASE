@@ -1,0 +1,412 @@
+{
+  "status": "success",
+  "url": "https://www.cars24.com/",
+  "scrape_type": "links",
+  "timestamp": "2025-11-23 15:24:49",
+  "data": {
+    "title": "CARS24: Buy & Sell Used Cars | Car Loan | New Car | Challan",
+    "total_links": 126,
+    "links": [
+      {
+        "text": "",
+        "url": "/"
+      },
+      {
+        "text": "Buy used car",
+        "url": "https://www.cars24.com/buy-used-cars/"
+      },
+      {
+        "text": "Used Cars in Delhi NCR",
+        "url": "https://www.cars24.com/buy-used-cars-delhi-ncr/"
+      },
+      {
+        "text": "Used Cars in Bangalore",
+        "url": "https://www.cars24.com/buy-used-cars-bangalore/"
+      },
+      {
+        "text": "Used Cars in Mumbai",
+        "url": "https://www.cars24.com/buy-used-cars-mumbai/"
+      },
+      {
+        "text": "Used Cars in Hyderabad",
+        "url": "https://www.cars24.com/buy-used-cars-hyderabad/"
+      },
+      {
+        "text": "Used Cars in New Delhi",
+        "url": "https://www.cars24.com/buy-used-cars-new-delhi/"
+      },
+      {
+        "text": "Used Cars in Ahmedabad",
+        "url": "https://www.cars24.com/buy-used-cars-ahmedabad/"
+      },
+      {
+        "text": "Used Cars in Chennai",
+        "url": "https://www.cars24.com/buy-used-cars-chennai/"
+      },
+      {
+        "text": "Used Cars in Pune",
+        "url": "https://www.cars24.com/buy-used-cars-pune/"
+      },
+      {
+        "text": "Used Cars in Noida",
+        "url": "https://www.cars24.com/buy-used-cars-noida/"
+      },
+      {
+        "text": "Used Cars in Gurgaon",
+        "url": "https://www.cars24.com/buy-used-cars-gurgaon/"
+      },
+      {
+        "text": "Used Cars in Ghaziabad",
+        "url": "https://www.cars24.com/buy-used-cars-ghaziabad/"
+      },
+      {
+        "text": "Used Cars in Lucknow",
+        "url": "https://www.cars24.com/buy-used-cars-lucknow/"
+      },
+      {
+        "text": "Used Cars in Jaipur",
+        "url": "https://www.cars24.com/buy-used-cars-jaipur/"
+      },
+      {
+        "text": "Used Cars in Faridabad",
+        "url": "https://www.cars24.com/buy-used-cars-faridabad/"
+      },
+      {
+        "text": "Used Cars in Surat",
+        "url": "https://www.cars24.com/buy-used-cars-surat/"
+      },
+      {
+        "text": "Buy cars online",
+        "url": "https://www.cars24.com/buy-used-cars/"
+      },
+      {
+        "text": "Sell car",
+        "url": "/sell-used-cars/"
+      },
+      {
+        "text": "Used car valuation",
+        "url": "https://www.cars24.com/used-car-valuation/"
+      },
+      {
+        "text": "Sell car in Delhi",
+        "url": "https://www.cars24.com/sell-used-car-new-delhi/"
+      },
+      {
+        "text": "Sell car in Mumbai",
+        "url": "https://www.cars24.com/sell-used-car-mumbai/"
+      },
+      {
+        "text": "Sell car in Bangalore",
+        "url": "https://www.cars24.com/sell-used-car-bangalore/"
+      },
+      {
+        "text": "Sell car in Hyderabad",
+        "url": "https://www.cars24.com/sell-used-car-hyderabad/"
+      },
+      {
+        "text": "Sell car in Ahmedabad",
+        "url": "https://www.cars24.com/sell-used-car-ahmedabad/"
+      },
+      {
+        "text": "Sell car in Gurgaon",
+        "url": "https://www.cars24.com/sell-used-car-gurgaon/"
+      },
+      {
+        "text": "Sell car in Chennai",
+        "url": "https://www.cars24.com/sell-used-car-chennai/"
+      },
+      {
+        "text": "Sell car in Pune",
+        "url": "https://www.cars24.com/sell-used-car-pune/"
+      },
+      {
+        "text": "Sell car in Noida",
+        "url": "https://www.cars24.com/sell-used-car-noida/"
+      },
+      {
+        "text": "Sell car in Ghaziabad",
+        "url": "https://www.cars24.com/sell-used-car-ghaziabad/"
+      },
+      {
+        "text": "Sell car in Lucknow",
+        "url": "https://www.cars24.com/sell-used-car-lucknow/"
+      },
+      {
+        "text": "Sell car in Jaipur",
+        "url": "https://www.cars24.com/sell-used-car-jaipur/"
+      },
+      {
+        "text": "Sell car in Kolkata",
+        "url": "https://www.cars24.com/sell-used-car-kolkata/"
+      },
+      {
+        "text": "Sell car in Kochi",
+        "url": "https://www.cars24.com/sell-used-car-kochi/"
+      },
+      {
+        "text": "Sell car in Indore",
+        "url": "https://www.cars24.com/sell-used-car-indore/"
+      },
+      {
+        "text": "Credit cards",
+        "url": "https://www.loans24.co.in/credit-card/"
+      },
+      {
+        "text": "Overview",
+        "url": "https://www.cars24.com/used-car-loan/"
+      },
+      {
+        "text": "Features & Benefits",
+        "url": "https://www.cars24.com/used-car-loan/#CF_EXCLUSIVE_BENEFITS"
+      },
+      {
+        "text": "Application Process",
+        "url": "https://www.cars24.com/used-car-loan/#CF_LOAN_STATE"
+      },
+      {
+        "text": "EMI Calculator",
+        "url": "https://www.cars24.com/used-car-loan/#CF_LANDING_EMI_CALCULATOR"
+      },
+      {
+        "text": "Document & Eligibility",
+        "url": "https://www.cars24.com/used-car-loan/#CF_DOCUMENT_REQUIRED"
+      },
+      {
+        "text": "Interest rates & charges",
+        "url": "https://www.loans24.co.in/used-car-loan/interest-rate/"
+      },
+      {
+        "text": "Why LOANS24?",
+        "url": "https://www.cars24.com/used-car-loan/#CF_SEO_COMPARISON_TABLE"
+      },
+      {
+        "text": "Overview",
+        "url": "https://www.loans24.co.in/loan-against-car/"
+      },
+      {
+        "text": "Features & Benefits",
+        "url": "https://www.loans24.co.in/loan-against-car/features-and-benefits/"
+      },
+      {
+        "text": "Calculator",
+        "url": "https://www.loans24.co.in/loan-against-car/emi-calculator/"
+      },
+      {
+        "text": "Document & Eligibility",
+        "url": "https://www.loans24.co.in/loan-against-car/eligibility-criteria/"
+      },
+      {
+        "text": "Application Process",
+        "url": "https://www.loans24.co.in/loan-against-car/how-to-apply/"
+      },
+      {
+        "text": "Interest & Charges",
+        "url": "https://www.loans24.co.in/loan-against-car/interest-rate/"
+      },
+      {
+        "text": "Pay your EMI",
+        "url": "https://www.loans24.co.in/digital-payment?utm_source=Loans24&utm_medium=Header_UCL&utm_content=Fetch_Details_Page/"
+      },
+      {
+        "text": "Overview",
+        "url": "https://www.loans24.co.in/personal-loan/"
+      },
+      {
+        "text": "Features & Benefits",
+        "url": "https://www.loans24.co.in/personal-loan/features-and-benefits/"
+      },
+      {
+        "text": "EMI Calculator",
+        "url": "https://www.loans24.co.in/personal-loan/emi-calculator/"
+      },
+      {
+        "text": "Document & Eligibility",
+        "url": "https://www.loans24.co.in/personal-loan/eligibility-criteria/"
+      },
+      {
+        "text": "Application Process",
+        "url": "https://www.loans24.co.in/personal-loan/how-to-apply/"
+      },
+      {
+        "text": "Interest & Charges",
+        "url": "https://www.loans24.co.in/personal-loan/interest-rate/"
+      },
+      {
+        "text": "New cars",
+        "url": "https://www.cars24.com/new-cars/"
+      },
+      {
+        "text": "Explore new car",
+        "url": "https://www.cars24.com/new-cars/"
+      },
+      {
+        "text": "Compare",
+        "url": "https://www.cars24.com/new-cars/compare-cars/"
+      },
+      {
+        "text": "News and Reviews",
+        "url": "https://www.cars24.com/news/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/tata/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/maruti-suzuki/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/kia/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/toyota/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/mg/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/new-cars/honda/"
+      },
+      {
+        "text": "Hyundai Creta",
+        "url": "https://www.cars24.com/new-cars/hyundai/creta/"
+      },
+      {
+        "text": "Mahindra Thar",
+        "url": "https://www.cars24.com/new-cars/mahindra/thar/"
+      },
+      {
+        "text": "Tata Nexon",
+        "url": "https://www.cars24.com/new-cars/tata/nexon/"
+      },
+      {
+        "text": "Tata Punch",
+        "url": "https://www.cars24.com/new-cars/tata/punch/"
+      },
+      {
+        "text": "Maruti Swift",
+        "url": "https://www.cars24.com/new-cars/maruti-suzuki/swift/"
+      },
+      {
+        "text": "Kia Seltos",
+        "url": "https://www.cars24.com/new-cars/kia/seltos/"
+      },
+      {
+        "text": "Sedan",
+        "url": "https://www.cars24.com/new-cars/search-by/sedan-cars/"
+      },
+      {
+        "text": "SUV",
+        "url": "https://www.cars24.com/new-cars/search-by/suv-cars/"
+      },
+      {
+        "text": "Hatchback",
+        "url": "https://www.cars24.com/new-cars/search-by/hatchback-cars/"
+      },
+      {
+        "text": "MUV",
+        "url": "https://www.cars24.com/new-cars/search-by/muv-cars/"
+      },
+      {
+        "text": "Under 5 Lakhs",
+        "url": "https://www.cars24.com/new-cars/search-by/cars-under-5-lakhs/"
+      },
+      {
+        "text": "Under 10 Lakhs",
+        "url": "https://www.cars24.com/new-cars/search-by/cars-under-10-lakhs/"
+      },
+      {
+        "text": "Under 15 Lakhs",
+        "url": "https://www.cars24.com/new-cars/search-by/cars-under-15-lakhs/"
+      },
+      {
+        "text": "Under 20 Lakhs",
+        "url": "https://www.cars24.com/new-cars/search-by/cars-under-20-lakhs/"
+      },
+      {
+        "text": "View & Pay Challan",
+        "url": "https://www.cars24.com/traffic-challan/"
+      },
+      {
+        "text": "Car Service History",
+        "url": "https://www.cars24.com/car-service-history/"
+      },
+      {
+        "text": "Car Scrap",
+        "url": "https://www.cars24.com/scrap-cars/"
+      },
+      {
+        "text": "Check vehicle details",
+        "url": "https://www.cars24.com/rto-vehicle-registration-details/"
+      },
+      {
+        "text": "Pre delivery Inspection",
+        "url": "https://www.cars24.com/pre-delivery-inspection/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-maruti-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-hyundai-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-tata-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-honda-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-mahindra-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-renault-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-ford-cars/"
+      },
+      {
+        "text": "",
+        "url": "https://www.cars24.com/buy-used-kia-cars/"
+      },
+      {
+        "text": "About Us",
+        "url": "https://www.cars24.com/about-us/"
+      },
+      {
+        "text": "Careers",
+        "url": "https://www.cars24.com/careers/"
+      },
+      {
+        "text": "Press kit",
+        "url": "https://www.cars24.com/press-kit/"
+      },
+      {
+        "text": "Blog",
+        "url": "https://autonauts.cars24.com/"
+      },
+      {
+        "text": "Article",
+        "url": "https://www.cars24.com/article/"
+      },
+      {
+        "text": "News",
+        "url": "https://www.cars24.com/news/"
+      },
+      {
+        "text": "Privacy Policy",
+        "url": "https://www.cars24.com/privacy-policy/"
+      }
+    ]
+  }
+}

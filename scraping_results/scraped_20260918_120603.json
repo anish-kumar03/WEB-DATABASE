@@ -1,0 +1,71 @@
+{
+  "status": "success",
+  "url": "https://anishofficial.in",
+  "scrape_type": "detailed",
+  "timestamp": "2026-09-18 12:06:03",
+  "data": {
+    "title": "ANISH OFFICIAL",
+    "meta_description": "",
+    "headings": {
+      "h1": [
+        "ANISH KUMAR"
+      ],
+      "h2": [
+        "HI 'ANISH HERE",
+        "ABOUT ME",
+        "SOFTWARE ENGINEER & GOOGLE CLOUD PROGRAM LEAD ’25",
+        "TECHNICAL EXPERTISE",
+        "PROJECTS",
+        "CERTIFICATIONS",
+        "GOOGLE DEVELOPER ECOSYSTEM",
+        "HONORS",
+        "INITIATIVES & IMPACT",
+        "HOW I BUILD & DELIVER",
+        "HAVE AN IDEA? LET'S BUILD IT."
+      ],
+      "h3": [
+        "FULL-STACK & AI ENGINEERING",
+        "AI PRODUCT DESIGN & CLOUD",
+        "STUDENT OF THE YEAR 2026 RUNGTA UNIVERSITY",
+        "TECH & AI AWARENESS CAMPAIGN",
+        "INTRODUCTION TO MICROSOFT LEARN STUDENT AMBASSADOR",
+        "WEB SCRAPING TECHNICAL INITIATIVE",
+        "SMART INDIA HACKATHON FINALS",
+        "CHESS STARTUP SUMMIT",
+        "TECHSTARS STARTUP WEEKEND",
+        "GOOGLE AI LABS RAIPUR 2026",
+        "INDIA AI IMPACT SUMMIT 2026",
+        "HACKINDIA 2025",
+        "COURSERA UNIVERSITY ORIENTATION PROGRAM",
+        "WHY\n            WORK WITH ME",
+        "WHAT I\n            BUILD",
+        "ADDRESS",
+        "CALL ME",
+        "EMAIL ME"
+      ]
+    },
+    "paragraphs": [
+      "I'M A PASSIONATE",
+      "I’m Anish, an AI-focused Software Engineer building intelligent, scalable software products. I work across\n          Generative AI, full-stack development, backend systems\n          and cloud technologies, turning real-world problems into practical solutions. My focus includes LLM\n          applications, RAG, AI agents, automation, and product engineering,\n          with hands-on experience building and deploying end-to-end applications.",
+      "A Software Engineer passionate about building AI-powered and cloud-driven products that turn ideas into\n              meaningful solutions.\n              I enjoy working across AI, full-stack engineering, and cloud technologies, while also building\n              communities, collaborating with people,\n              and sharing what I learn. As a Google Cloud Program Lead ’25, I’ve developed a strong interest in both\n              technology and the people\n              behind it—building, experimenting, learning, and creating an impact beyond just code.",
+      "GitHub Contributions",
+      "40+ GitHub Repo",
+      "120+ Hackathon Hours",
+      "Hackathon Finalist",
+      "CHECKOUT SOME OF MY LATEST WORK",
+      "AI-powered system to detect and monitor cybersecurity threats in real\n                  time for ICS networks.",
+      "Advanced image classification and recognition system built with deep\n                  learning techniques.",
+      "Channel estimation techniques in 5G networks to improve signal\n                  performance and transmission accuracy.",
+      "Generative AI application for fast, high-quality automated text content\n                  creation.",
+      "Strategic social media product launch marketing campaign across multiple\n                  platforms.",
+      "Comprehensive community building and engagement strategy driving user\n                  participation.",
+      "Professional certifications and credentials.",
+      "Issuer: Google Cloud",
+      "Nov 02, 2025",
+      "Issuer: MongoDB",
+      "Aug 29, 2026\n ID: 37f9bb70-bb28-47d0-b056-acfb58c52285",
+      "Issuer: Microsoft Press (LinkedIn Learning)"
+    ],
+    "total_paragraphs": 69
+  }
+}

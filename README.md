@@ -1,4 +1,4 @@
-#  Web scraping, database and related analytics
+# Web Scraping, Database, and Related Analytics
 
 [![GitHub issues](https://img.shields.io/github/issues/tirthajyoti/Web-Database-Analytics-Python.svg)](https://github.com/tirthajyoti/Web-Database-Analytics-Python/issues)
 [![GitHub forks](https://img.shields.io/github/forks/tirthajyoti/Web-Database-Analytics-Python.svg)](https://github.com/tirthajyoti/Web-Database-Analytics-Python/network)
@@ -6,17 +6,42 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/tirthajyoti/Web-Database-Analytics-Python/pulls)
 [![Github commits](https://img.shields.io/github/commit-activity/y/tirthajyoti/Web-Database-Analytics-Python.svg)](https://github.com/tirthajyoti/Web-Database-Analytics-Python/stats/contributors)
 
-### live Link - https://web-database-analytics-master.onrender.com/
+---
+
+### Live Application
+**Try out the web scraper here:** [https://web-database-analytics-master.onrender.com/](https://web-database-analytics-master.onrender.com/)
 
 ---
 
-### Requirements
+## Interactive Web Scraper Application (New!)
+This repository now features a fully interactive **Flask-based Web Scraper** application (`web_scraper_app.py`). It allows users to scrape and extract valuable insights (like tables, links, basic info, or detailed text) from any URL directly through a web browser interface without running Python commands.
+
+### How to Run the Web Application Locally
+1. Ensure all dependencies are installed: `pip install -r requirements.txt`
+2. Start the web server: `python web_scraper_app.py`
+3. Open your browser and go to: `http://localhost:5000`
+
+### Deployment
+The web scraper is fully ready to be deployed on platforms like **Render**, **Railway**, or **Heroku**. It includes a `Procfile` and updated `requirements.txt` with Gunicorn for seamless production deployment. 
+- **Build Command**: `pip install -r requirements.txt`
+- **Start Command**: `gunicorn web_scraper_app:app`
+
+---
+
+## Requirements & Setup
+For the complete list of dependencies, see [`requirements.txt`](requirements.txt).
+
+Install everything via:
+```bash
+pip install -r requirements.txt
+```
+Key packages used include:
 * **Python 3.5+**
-* **NumPy (`$ pip install numpy`)**
-* **Pandas (`$ pip install pandas`)**
-* **requests (`$ pip install requests`)**
-* **BeautifulSoup4 (`$ pip install beautifulsoup4`)**
-* **MatplotLib (`$ pip install matplotlib`)**
+* **Flask & Gunicorn** (for the web app)
+* **NumPy & Pandas** (for data manipulation)
+* **requests & BeautifulSoup4** (for web scraping)
+* **Matplotlib, Seaborn, Wordcloud** (for data visualization)
+* **NLTK** (for natural language processing)
 
 ---
 
@@ -33,7 +58,9 @@
 * [Application of **ElementTree for XML parsing**](https://github.com/tirthajyoti/Web-Database-Analytics-Python/blob/master/XML_reading_scraping.ipynb)
 * Application of **Python json library for JSON parsing**
 * [Application of **Python sqlite library** (building a personal movie database)](https://github.com/tirthajyoti/Web-Database-Analytics-Python/blob/master/Movie_Database_Build.ipynb)
+
 ---
+
 ### [How to design your own mini-IMDB movie database by scraping web](https://github.com/tirthajyoti/Web-Database-Analytics-Python/blob/master/Movie_Database_Build.ipynb)?
 ---
 **[Check out this article I wrote on Medium about this topic](https://towardsdatascience.com/step-by-step-guide-to-build-your-own-mini-imdb-database-fc39af27d21b)**
@@ -41,19 +68,23 @@
 <img src="https://cdn-images-1.medium.com/max/1000/1*WvTpS5A6uGZ2m021K31dCQ.png" width="400" height="300"/>
 
 ---
+
 ### [How to scrape data from CIA website (this is harmless, I promise) about simple facts on various nations](https://github.com/tirthajyoti/Web-Database-Analytics-Python/blob/master/CIA-Factbook-Analytics2.ipynb)?
 **[Check out this article I wrote on Medium about this topic](https://towardsdatascience.com/data-analytics-with-python-by-web-scraping-illustration-with-cia-world-factbook-abbdaa687a84)**
 
 <img src="https://cdn-images-1.medium.com/max/1000/1*X2QkNgg-vR3NRnGDquRm9w.png" width="400" height="300"/>
 
 ---
+
 ### [How to build a Yelp crawler which can generate interesting word cloud based on a particular city's food cuisine and taste](https://github.com/tirthajyoti/Web-Database-Analytics-Python/tree/master/Yelp_Review)?
 <img src="https://raw.githubusercontent.com/tirthajyoti/Web-Database-Analytics-Python/master/Images/Yelp_word_cloud_1.png" width="600" height="350"/>
 
 ---
+
 ### How to crawl the [Project Gutenberg](https://www.gutenberg.org/) portal and download 100 most popular books automatically?
 <img src="https://i.pinimg.com/originals/3a/b8/d5/3ab8d5c378f62bfa723d89d2a4aee3db.jpg" width="600" height="350"/>
 
 ---
+
 ### [How to use a free API to download basic information about countries around the world and build a database](https://github.com/tirthajyoti/Web-Database-Analytics-Python/blob/master/Countries-JSON-API.ipynb)?
 <img src="https://raw.githubusercontent.com/tirthajyoti/Web-Database-Analytics-Python/master/Images/Building%20country%20database.png" height="350"/>
